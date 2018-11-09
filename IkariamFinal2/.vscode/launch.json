@@ -10,6 +10,17 @@
             "mainClass": "test.IkariamTest",
             "args": "",
             "projectName": "Ikariam_Dat"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - IkariamTest",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "src.test.IkariamTest",
+            "args": "",
+            "projectName": "Ikariam_Dat"
         }
     ]
 }
