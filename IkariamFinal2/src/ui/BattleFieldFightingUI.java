@@ -23,48 +23,48 @@ import model.BattleFieldFighting;
  * @author GBlue
  */
 public class BattleFieldFightingUI extends JDialog{
-    
+
     public static JTabbedPane pnTab;
-    
+
     JPanel pnMain, pnTitle, pnButton, pnContent;
     JLabel lblImg, lblTitle, lblImgTitle;
     JButton btnDispose;
     PnBattleFieldFighting pnAttack, pnDefence;
-    BattleFieldFighting battleFieldFighting; 
-    
+    BattleFieldFighting battleFieldFighting;
+
     public BattleFieldFightingUI(BattleFieldFighting battleFieldFighting) {
         this.battleFieldFighting = battleFieldFighting;
         addControls();
         addEvents();
     }
-    
+
     public void addControls() {
         Container con = getContentPane();
         con.setLayout(null);
-        
+
         lblImgTitle = new JLabel();
         lblImgTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/lblHouTitle.png")));
         lblImgTitle.setBounds(210, 0, 60, 60);
         con.add(lblImgTitle);
-        
+
         pnTitle = new JPanel(null);
         con.add(pnTitle);
         pnTitle.setBounds(0, 30, 980, 20);
         pnTitle.setBackground(new Color(215, 172, 116));
-        
+
         lblTitle = new JLabel("Battle Field");
         lblTitle.setBounds(420, 0, 125, 15);
         pnTitle.add(lblTitle);
         btnDispose = new JButton(new ImageIcon(getClass().getResource("/image/xButton.png")));
         btnDispose.setBounds(960, 0, 20, 20);
         pnTitle.add(btnDispose);
-        
+
         pnMain = new JPanel();
         pnMain.setLayout(null);
         pnMain.setBounds(0, 50, 980, 480);
         pnMain.setBackground(new Color(253, 247, 221));
         con.add(pnMain);
-        
+
         pnAttack = new PnBattleFieldFighting(battleFieldFighting.getAttackBattleField());
         pnDefence = new PnBattleFieldFighting(battleFieldFighting.getDefenceBattleField());
         pnAttack.setBounds(10, 50, 946, 179);
@@ -73,22 +73,22 @@ public class BattleFieldFightingUI extends JDialog{
         pnDefence.addToReserves();
         pnMain.add(pnAttack);
         pnMain.add(pnDefence);
-        
+
         //    lblImageField.setIcon(new javax.swing.ImageIcon(getClass().getResource(battleField.getImage())));
     }
-    
+
     public void addEvents() {
 
 //         for(Army.Unit unit: Army.Unit.values()){
-       
-        
+
+
         btnDispose.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
             }
         });
-     
+
     }
     public void showWindow() {
         setSize(980, 530);
@@ -107,7 +107,7 @@ public class BattleFieldFightingUI extends JDialog{
     public void setBattleFieldFighting(BattleFieldFighting battleFieldFighting) {
         this.battleFieldFighting = battleFieldFighting;
     }
-    
+
     public void resetBattleFieldFightingUI(BattleFieldFighting battleFieldFighting){
         pnMain.removeAll();
        this.battleFieldFighting = battleFieldFighting;
@@ -121,9 +121,9 @@ public class BattleFieldFightingUI extends JDialog{
         pnMain.add(pnDefence);
         pnMain.updateUI();
     }
-    
+
 }
-     
+
 
 //
 //      private void addToReserves() {
@@ -131,7 +131,7 @@ public class BattleFieldFightingUI extends JDialog{
 //        int i = 0;
 //        PnSlotReserve[] pnslotReserve = new PnSlotReserve[12];
 //        for (Army.Unit unit : Army.Unit.values()) {
-//            
+//
 //            pnslotReserve[unit.ordinal()] = new PnSlotReserve(battleField, unit);
 //            if(pnslotReserve[unit.ordinal()].battleField.reserve.getUnit(unit).size() == 0) continue;
 //            pnslotReserve[unit.ordinal()].setBounds(52 * i, 10, 50, 45);
@@ -142,5 +142,3 @@ public class BattleFieldFightingUI extends JDialog{
 //
 //    }
     //Show the HouseInfoUI dialog
-    
-

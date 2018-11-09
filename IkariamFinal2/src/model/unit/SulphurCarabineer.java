@@ -1,7 +1,7 @@
 package model.unit;
 
 public class SulphurCarabineer extends LongRangeFighter {
-	
+
 	public static final int size = 4;
 	public static final int nearHit = 3;
 	public static final float accuracyNearHit = 0.6f;
@@ -18,7 +18,7 @@ public class SulphurCarabineer extends LongRangeFighter {
     public String getImageUrl() {
         return imageUrl;
     }
-        
-        
-	
+
+
+
 }

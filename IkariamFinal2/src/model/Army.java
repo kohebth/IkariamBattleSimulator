@@ -68,7 +68,7 @@ public class Army {
         }
 
     }
-    
+
     public void clear(){
         numberOfArcher = 0;
         numberOfBB = 0;
@@ -88,7 +88,7 @@ public class Army {
         Front, LRF, Artillery, Flank, Bomber, Airdefence;
     }
 
-    
+
 
     public int getNumberOfHop() {
         return numberOfHop;
@@ -374,22 +374,22 @@ public class Army {
     public void setArmourUpgrade(int[] armourUpgrade) {
         this.armourUpgrade = armourUpgrade;
     }
-    
+
     public int getSpeedTimeForWholeRoute() {
         if (getNumberOfBB() > 0)
             return 30*60*1000/3;
-        else if (getNumberOfSteam() > 0 
-                || getNumberOfMotar() > 0 
-                || getNumberOfCatapult() > 0 
+        else if (getNumberOfSteam() > 0
+                || getNumberOfMotar() > 0
+                || getNumberOfCatapult() > 0
                 || getNumberOfRam() > 0)
             return 15*60*1000/3;
-        else if (getNumberOfArcher() > 0 
-                || getNumberOfSC() > 0 
+        else if (getNumberOfArcher() > 0
+                || getNumberOfSC() > 0
                 || getNumberOfSlinger() > 0
-                || getNumberOfHop() > 0 
+                || getNumberOfHop() > 0
                 || getNumberOfSpear() > 0)
             return 10*60*1000/3;
-        
+
         return 75*6*1000; // chỉ có máy bay
     }
 }

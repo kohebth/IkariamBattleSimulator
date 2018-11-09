@@ -78,7 +78,7 @@ public class Wall extends UnitFighter{
     public static void setImageUrl(String imageUrl) {
         Wall.imageUrl = imageUrl;
     }
-    
-    
+
+
 
 }

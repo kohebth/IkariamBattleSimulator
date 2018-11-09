@@ -32,6 +32,6 @@ public class UnitFighter {
     public void setArmour(int armour) {
         this.armour = armour;
     }
-
-
+    
+    
 }

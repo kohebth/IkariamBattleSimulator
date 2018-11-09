@@ -63,6 +63,7 @@ public class HouseInfoUI extends JDialog {
         lblImgTitle = new JLabel(new ImageIcon(getClass().getResource("/image/lblHouTitle.png")));
         lblImgTitle.setBounds(20, 0, 60, 60);
         con.add(lblImgTitle);
+
         pnMain = new JPanel(null);
         pnMain.setBounds(0, 30, 600, 500);
         pnMain.setBackground(new Color(253, 247, 221));
@@ -210,7 +211,7 @@ public class HouseInfoUI extends JDialog {
                 sldLevelHouse.setValue(Integer.valueOf(txtLevelHouse.getText()));
             }
         });
-        
+
 
         sldLevelWall.addChangeListener(new ChangeListener() {
             public void stateChanged(ChangeEvent evt) {

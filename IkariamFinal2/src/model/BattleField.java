@@ -1867,7 +1867,7 @@ public class BattleField {
         }
         return true;
     }
-    
+
      public boolean isAllWall(){
         return this.getReserve().getWall().size()==this.getNumberOfSlotForHI();
     }
@@ -1936,7 +1936,7 @@ public class BattleField {
     public void setSlotArcher(ArrayList<Archer> slotArcher) {
         this.slotArcher = slotArcher;
     }
-    
+
 //Lấy toàn bộ máu của tất cả các quân trong các slot để kiểm tra chiến trường có thay đổi hay không
      public int getTotalHitpoint()  {
         int totalHitpoint = 0;

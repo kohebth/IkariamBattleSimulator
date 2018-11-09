@@ -93,8 +93,8 @@ public class PnWaveAttack extends JPanel {
         this.add(lblOrigin);
         this.add(lblTarget);
         this.add(btnAction);
-        
-        
+
+
     }
 
     private void addEvents() {

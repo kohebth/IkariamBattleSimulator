@@ -28,6 +28,6 @@ public class Ram extends Artillery{
     public String getImageUrl() {
         return imageUrl;
     }
-    
-    
+
+
 }
