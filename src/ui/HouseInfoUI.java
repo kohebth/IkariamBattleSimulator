@@ -60,7 +60,7 @@ public class HouseInfoUI extends JDialog {
     public void addControls() {
         Container con = getContentPane();
         con.setLayout(null);
-        lblImgTitle = new JLabel(new ImageIcon(getClass().getResource("/Image/lblHouTitle.PNG")));
+        lblImgTitle = new JLabel(new ImageIcon(getClass().getResource("/image/lblHouTitle.png")));
         lblImgTitle.setBounds(20, 0, 60, 60);
         con.add(lblImgTitle);
 
@@ -75,7 +75,7 @@ public class HouseInfoUI extends JDialog {
         lblTitle = new JLabel("House's Information");
         lblTitle.setBounds(250, 0, 125, 15);
         pnTitle.add(lblTitle);
-        btnDispose = new JButton(new ImageIcon(getClass().getResource("/Image/xButton.PNG")));
+        btnDispose = new JButton(new ImageIcon(getClass().getResource("/image/xButton.png")));
         btnDispose.setBounds(580, 0, 20, 20);
         pnTitle.add(btnDispose);
 
@@ -126,7 +126,7 @@ public class HouseInfoUI extends JDialog {
 
         btnPillage = new JButton();
         btnPillage.setBounds(50, 290, 50, 35);
-        btnPillage.setIcon(new ImageIcon(getClass().getResource("/Image/Pillage_Enabled.PNG")));
+        btnPillage.setIcon(new ImageIcon(getClass().getResource("/image/Pillage_Enabled.png")));
         pnMain.add(btnPillage);
 
         btnBarrack = new JButton("Set Barrack");
@@ -144,7 +144,7 @@ public class HouseInfoUI extends JDialog {
         btnUpgradeUnit.setBackground(new Color(248, 222, 164));
         pnMain.add(btnUpgradeUnit);
 
-        lblImg = new JLabel(new ImageIcon(getClass().getResource("/Image/HouseInfo.PNG")));
+        lblImg = new JLabel(new ImageIcon(getClass().getResource("/image/HouseInfo.png")));
         lblImg.setBounds(370, 270, 200, 200);
         pnMain.add(lblImg);
 
@@ -165,10 +165,10 @@ public class HouseInfoUI extends JDialog {
                 cbo.setSelectedIndex(IsLandUI.currentHouse.getTypeOfHouse());
                 if (IsLandUI.currentHouse.getTypeOfHouse() == 2) {
                     btnPillage.setEnabled(true);
-                    btnPillage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Pillage_Enabled.PNG")));
+                    btnPillage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Pillage_Enabled.png")));
                 } else {
                     btnPillage.setEnabled(false);
-                    btnPillage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Pillage_Disabled.PNG")));
+                    btnPillage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Pillage_Disabled.png")));
                 }
                 if (IsLandUI.currentHouse.getBattleFieldFighting().isWar()) {
                     sldLevelHouse.setEnabled(false);
@@ -258,10 +258,10 @@ public class HouseInfoUI extends JDialog {
                 }
                 if (cbo.getSelectedIndex() == 2) {
                     btnPillage.setEnabled(true);
-                    btnPillage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Pillage_Enabled.PNG")));
+                    btnPillage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Pillage_Enabled.png")));
                 } else {
                     btnPillage.setEnabled(false);
-                    btnPillage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Pillage_Disabled.PNG")));
+                    btnPillage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Pillage_Disabled.png")));
                 }
             }
         });
@@ -390,7 +390,7 @@ public class HouseInfoUI extends JDialog {
             setIconHouse();
         } else {
             IsLandUI.currentHouse.setTypeOfHouse(3);
-            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/flag.PNG")));
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/flag.png")));
         }
         IsLandUI.currentTextField.setText(IsLandUI.currentHouse.getName());
         IsLandUI.currentTextField.setVisible(true);
@@ -400,28 +400,28 @@ public class HouseInfoUI extends JDialog {
 
     private void setIconHouse() {
         if (IsLandUI.currentHouse.getLevelOfHouse() == 1) {
-            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/houseLv1.PNG")));
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/House/houseLv1.png")));
         }
         if (IsLandUI.currentHouse.getLevelOfHouse() >= 2 && IsLandUI.currentHouse.getLevelOfHouse() <= 3) {
-            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/houseLv2.PNG")));
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/House/houseLv2.png")));
         }
         if (IsLandUI.currentHouse.getLevelOfHouse() >= 4 && IsLandUI.currentHouse.getLevelOfHouse() <= 6) {
-            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/houseLv4.PNG")));
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/House/houseLv4.png")));
         }
         if (IsLandUI.currentHouse.getLevelOfHouse() >= 7 && IsLandUI.currentHouse.getLevelOfHouse() <= 9) {
-            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/houseLv7.PNG")));
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/House/houseLv7.png")));
         }
         if (IsLandUI.currentHouse.getLevelOfHouse() >= 10 && IsLandUI.currentHouse.getLevelOfHouse() <= 12) {
-            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/houseLv10.PNG")));
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/House/houseLv10.png")));
         }
         if (IsLandUI.currentHouse.getLevelOfHouse() >= 13 && IsLandUI.currentHouse.getLevelOfHouse() <= 15) {
-            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/houseLv13.PNG")));
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/House/houseLv13.png")));
         }
         if (IsLandUI.currentHouse.getLevelOfHouse() == 16 || IsLandUI.currentHouse.getLevelOfHouse() == 17) {
-            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/houseLv16.PNG")));
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/House/houseLv16.png")));
         }
         if (IsLandUI.currentHouse.getLevelOfHouse() >= 18) {
-            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/House/houseLv18+.PNG")));
+            IsLandUI.currentButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/House/houseLv18+.png")));
         }
     }
 
