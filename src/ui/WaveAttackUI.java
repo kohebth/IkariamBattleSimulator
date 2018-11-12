@@ -152,7 +152,7 @@ public class WaveAttackUI extends JDialog {
                     pnWave[count].getLblOrigin().setText(IsLandUI.myHouse.getName());
                     pnWave[count].getLblTarget().setText(IsLandUI.house[key].getName());
                     pnWave[count].getLblUnit().setText(numberOfUnit + "");
-                    pnWave[count].getLblMission().setIcon(new ImageIcon(getClass().getResource("/image/Pillage_Enabled.png")));
+                    pnWave[count].getLblMission().setIcon(new ImageIcon(getClass().getResource("/Image/Pillage_Enabled.PNG")));
 
                     SimpleDateFormat ft = new SimpleDateFormat("mm:ss");
                     Timer dongho = new Timer(1000, new ActionListener() {
@@ -189,7 +189,7 @@ public class WaveAttackUI extends JDialog {
                     pnWave[count].getLblOrigin().setText(IsLandUI.myHouse.getName());
                     pnWave[count].getLblTarget().setText(IsLandUI.house[key].getName());
                     pnWave[count].getLblUnit().setText(numberOfUnit + "");
-                    pnWave[count].getLblMission().setIcon(new ImageIcon(getClass().getResource("/image/arival.png")));
+                    pnWave[count].getLblMission().setIcon(new ImageIcon(getClass().getResource("/Image/arival.PNG")));
                     SimpleDateFormat ft = new SimpleDateFormat("mm:ss");
                     Timer dongho = new Timer(1000, new ActionListener() {
                         public void actionPerformed(ActionEvent e) {

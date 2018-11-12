@@ -43,7 +43,7 @@ public class PnSetUnit extends JPanel{
 //        this.urlImg = urlImg;
         addControls();
         addEvents();
-
+                
     }
     public void addControls() {
         this.setLayout(null);
@@ -55,17 +55,17 @@ public class PnSetUnit extends JPanel{
         lblName.setBounds(70, 15, 100, 20);
         this.add(lblName);
         sld = new JSlider(0, 2000);
-        sld.setBounds(200, 15, 300, 20);
+        sld.setBounds(200, 15, 250, 20);
         sld.setBackground(new Color(251,232,193));
         this.add(sld);
         txt = new JTextField(3);
-        txt.setBounds(520, 15, 30, 20);
+        txt.setBounds(470, 15, 35, 20);
         this.add(txt);
         btnSetMax = new JButton("Max");
-        btnSetMax.setBounds(555, 15, 60, 20);
+        btnSetMax.setBounds(505, 15, 60, 20);
         this.add(btnSetMax);
     }
-    public void addEvents() {
+    public void addEvents() {        
         sld.addChangeListener(new ChangeListener() {
             public void stateChanged(ChangeEvent e) {
                 txt.setText(String.valueOf(sld.getValue()));
@@ -83,7 +83,7 @@ public class PnSetUnit extends JPanel{
                     txt.setText("0");
                 else if(intValue >= 1000)
                     txt.setText("999");
-
+                
                 sld.setValue(Integer.valueOf(txt.getText()));
             }
         });
@@ -118,5 +118,5 @@ public class PnSetUnit extends JPanel{
     public void setSld(JSlider sld) {
         this.sld = sld;
     }
-
+    
 }

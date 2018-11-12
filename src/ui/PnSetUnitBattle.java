@@ -6,6 +6,8 @@
 package ui;
 
 import java.awt.event.MouseListener;
+
+import javax.swing.JButton;
 import javax.swing.JSlider;
 import javax.swing.JTextField;
 import model.Army;
@@ -26,11 +28,11 @@ public class PnSetUnitBattle extends PnSetUnit {
         lblIcon.setBounds(150, 5, 50, 45);
         lblName.setBounds(210, 15, 100, 20);
         sld.setBounds(360, 15, 350, 20);
-        txt.setBounds(750, 15, 30, 20);
-        btnSetMax.setBounds(790, 15, 50, 20);
+        txt.setBounds(750, 15, 35, 20);
+        btnSetMax.setBounds(790, 15, 60, 20);
         
         txtMax = new JTextField(3);
-        txtMax.setBounds(300, 15, 30, 15);
+        txtMax.setBounds(300, 15, 35, 15);
         this.add(txtMax);
         
     }

@@ -25,12 +25,12 @@ import model.Army;
  * @author NgocAnh
  */
 public class UpgradeUnitUI extends JDialog{
-
+    
     JPanel pnMain, pnTitle;
     JLabel lblImgTitle, lblTitle;
     JButton btnDispose, btnOK;
     MyPanel[] panelUpgradeUnit;
-
+    
     public UpgradeUnitUI(){
         panelUpgradeUnit = new MyPanel[13];
         addControl();
@@ -51,7 +51,7 @@ public class UpgradeUnitUI extends JDialog{
         lblTitle = new JLabel("Upgrade Unit");
         lblTitle.setBounds(300, 0, 125, 15);
         pnTitle.add(lblTitle);
-        btnDispose = new JButton(new ImageIcon(getClass().getResource("/image/xButton.png")));
+        btnDispose = new JButton(new ImageIcon(getClass().getResource("/Image/xButton.PNG")));
         btnDispose.setBounds(680, 0, 20, 20);
         pnTitle.add(btnDispose);
 
@@ -61,11 +61,12 @@ public class UpgradeUnitUI extends JDialog{
         pnMain.setBackground(new Color(253, 247, 221));
 
         JScrollPane scDialog = new JScrollPane(pnMain, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scDialog.getVerticalScrollBar().setUnitIncrement(16);
         scDialog.setBounds(0, 50, 700, 520);
         con.add(scDialog);
 
         int d = 0; //d is the distance between 2 panel
-
+        
         for (Army.Unit unit : Army.Unit.values()) {
             if (unit.ordinal() == 12)
                 break;
@@ -81,7 +82,7 @@ public class UpgradeUnitUI extends JDialog{
         pnMain.add(btnOK);
 
     }
-
+    
     public void addEvents(){
         this.addComponentListener(new ComponentAdapter() {
             public void componentShown(ComponentEvent evt){
@@ -93,7 +94,7 @@ public class UpgradeUnitUI extends JDialog{
                 }
             }
         });
-
+        
         btnOK.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -110,14 +111,14 @@ public class UpgradeUnitUI extends JDialog{
                         amour[i] = 0;
                     else
                         amour[i] = Integer.valueOf(panelUpgradeUnit[i].getTxtAmour().getText());
-                    //army.getArmourUpgrade()[unit.ordinal()] = panelUpgradeUnit[i].getAmour();
+                    //army.getArmourUpgrade()[unit.ordinal()] = panelUpgradeUnit[i].getAmour();                    
                 }
                 IsLandUI.currentHouse.getArmy().setDamageUpgrade(damage);
                 IsLandUI.currentHouse.getArmy().setArmourUpgrade(amour);
                 dispose();
             }
         });
-
+        
         btnDispose.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -125,7 +126,7 @@ public class UpgradeUnitUI extends JDialog{
             }
         });
     }
-
+    
     public void showWindow(){
         this.setSize(700, 570);
         setUndecorated(true);
