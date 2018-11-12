@@ -211,7 +211,7 @@ public class HouseInfoUI extends JDialog {
                 sldLevelHouse.setValue(Integer.valueOf(txtLevelHouse.getText()));
             }
         });
-        
+
 
         sldLevelWall.addChangeListener(new ChangeListener() {
             public void stateChanged(ChangeEvent evt) {

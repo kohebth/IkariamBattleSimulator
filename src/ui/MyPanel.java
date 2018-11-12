@@ -34,12 +34,12 @@ public class MyPanel extends JPanel{
     Army.Unit nameUnit;
     protected int damage = 0;
     protected int amour = 0;
-    
+
     public MyPanel(Army.Unit nameUnit) {
         this.nameUnit = nameUnit;
 //        this.urlImg = urlImg;
         addControls();
-        addEvents();                
+        addEvents();
     }
 
     public void addControls() {
@@ -48,48 +48,48 @@ public class MyPanel extends JPanel{
         lblIcon = new JLabel(new ImageIcon(getClass().getResource("/image/" + nameUnit + ".png")));
         lblIcon.setBounds(10, 5, 50, 45);
         this.add(lblIcon);
-        
+
         lblDamage = new JLabel("Damage +");
         lblDamage.setBounds(100, 15, 70, 20);
         this.add(lblDamage);
-        
+
         txtDamage = new JTextField(3);
         txtDamage.setEditable(false);
         txtDamage.setBounds(180, 15, 30, 20);
         this.add(txtDamage);
-        
+
         btnImproveDamage = new JButton();
-        btnImproveDamage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Improve.png")));
+        btnImproveDamage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Improve.png")));
         btnImproveDamage.setBounds(250, 15, 77, 24);
         this.add(btnImproveDamage);
-        
+
         lblAmour = new JLabel("Amour +");
         lblAmour.setBounds(380, 15, 70, 20);
         this.add(lblAmour);
-        
+
         txtAmour = new JTextField(3);
         txtAmour.setEditable(false);
         txtAmour.setBounds(460, 15, 30, 20);
         this.add(txtAmour);
-        
+
         btnImproveAmour = new JButton();
-        btnImproveAmour.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Improve.png")));
+        btnImproveAmour.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Improve.png")));
         btnImproveAmour.setBounds(530, 15, 77, 24);
         this.add(btnImproveAmour);
 
     }
-    
+
     public void addEvents(){
         btnImproveDamage.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(damage < 3){
-                    damage++;                                    
+                    damage++;
                 }
                 txtDamage.setText(String.valueOf(damage));
             }
         });
-        
+
         btnImproveAmour.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -53,7 +53,7 @@ import model.unit.Swordsman;
  * @author admin
  */
 public class BattleFieldUI extends JDialog {
-    
+
     PanelBattlefield pnBattlefield;
     JButton btnOK, btnRun;
     BattleField battleField;
@@ -61,16 +61,16 @@ public class BattleFieldUI extends JDialog {
     Army sentedArmy, army;
     ArrayList<SendingArmy> sendingArmy;
     Timer timer = new Timer();
-    
+
     public static JTabbedPane pnTab;
-    
+
     JPanel pnMain, pnTitle, pnButton, pnContent;
     JLabel lblImg, lblTitle, lblImgTitle;
     JButton btnDispose;
-    
+
     PnSetUnitBattle[] pnSetUnitBattle;
     BattleFieldFighting battleFieldFighting;
-    
+
     public BattleFieldUI() {
         sendingArmy = new ArrayList<SendingArmy>();
         battleField = new BattleField(IsLandUI.currentHouse.getLevelOfHouse(), BattleField.TypeOfBattleField.ATTACK);
@@ -78,33 +78,33 @@ public class BattleFieldUI extends JDialog {
         addControls();
         addEvents();
     }
-    
+
     public void addControls() {
         Container con = getContentPane();
         con.setLayout(null);
-        
+
         lblImgTitle = new JLabel();
         lblImgTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/lblHouTitle.png")));
         lblImgTitle.setBounds(210, 0, 60, 60);
         con.add(lblImgTitle);
-        
+
         pnTitle = new JPanel(null);
         con.add(pnTitle);
         pnTitle.setBounds(0, 30, 980, 20);
         pnTitle.setBackground(new Color(215, 172, 116));
-        
+
         lblTitle = new JLabel("Battle Field");
         lblTitle.setBounds(420, 0, 125, 15);
         pnTitle.add(lblTitle);
-        btnDispose = new JButton(new ImageIcon(getClass().getResource("/Image/xButton.PNG")));
+        btnDispose = new JButton(new ImageIcon(getClass().getResource("/image/xButton.png")));
         btnDispose.setBounds(960, 0, 20, 20);
         pnTitle.add(btnDispose);
-        
+
         pnMain = new JPanel();
         pnMain.setLayout(null);
         pnMain.setPreferredSize(new Dimension(600, 1560));
         pnMain.setBackground(new Color(253, 247, 221));
-        
+
         JScrollPane scDialog = new JScrollPane(pnMain, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         scDialog.getVerticalScrollBar().setUnitIncrement(16);
         scDialog.setBounds(0, 50, 980, 480);//
@@ -125,29 +125,29 @@ public class BattleFieldUI extends JDialog {
         pnMain.add(pnMain2);
         pnMain2.setBackground((new Color(253, 247, 221)));
         pnMain2.setLayout(null);
-        
+
         Border border = BorderFactory.createLineBorder(Color.blue);
-        
+
         JPanel pn1 = new JPanel();
         pn1.setBorder(border);
         pn1.setPreferredSize(new Dimension(750, 60));
         pn1.setBounds(10, 10, 750, 60);
         pn1.setLayout(null);
         btnRun = new JButton();
-        btnRun.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/smallPlay.png")));
+        btnRun.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/smallPlay.png")));
         btnRun.setPreferredSize(new Dimension(50, 50));
         btnRun.setBounds(650, 5, 50, 50);
         pn1.add(btnRun);
         pn1.setBackground(new Color(253, 247, 221));
         pnMain2.add(pn1);
-        
+
         JPanel pnField = new JPanel();
         pnField.setBorder(border);
         pnField.setPreferredSize(new Dimension(750, 400));
         pnField.setBounds(10, 150, 780, 400);
         pnField.setBackground(new Color(253, 247, 221));
         pnField.setLayout(null);
-        
+
         JLabel lblPreView = new JLabel("Preview of Battlefield");
         Font fontPreview = new Font("arial", Font.BOLD, 15);
         lblPreView.setFont(fontPreview);
@@ -159,11 +159,11 @@ public class BattleFieldUI extends JDialog {
         pnBattlefield.setBounds(10, 70, 763, 192);
         pnBattlefield.setBackground(new Color(253, 247, 221));
         pnField.add(pnBattlefield);
-                
+
         JLabel lblReserve = new JLabel("Reserve:");
         lblReserve.setBounds(10, 250, 100, 50);
         pnField.add(lblReserve);
-        
+
         reservePanel = new JPanel();
         reservePanel.setBounds(10, 300, 700, 60);
         reservePanel.setLayout(null);
@@ -171,7 +171,7 @@ public class BattleFieldUI extends JDialog {
         pnField.add(reservePanel);
         pnMain2.add(pnField);
     }
-    
+
     public void addEvents() {
         this.addComponentListener(new ComponentAdapter() {
             public void componentShown(ComponentEvent evt) {
@@ -198,11 +198,11 @@ public class BattleFieldUI extends JDialog {
 //                public void mouseReleased(MouseEvent e) {
 //                    setBattleField(unit);
 //                    addToReserves();
-//                    
+//
 //                }
 //});
         }
-        
+
         btnDispose.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -222,7 +222,7 @@ public class BattleFieldUI extends JDialog {
             }
         });
     }
-    
+
     private void saveArmyAndSentedArmy() {
         SendingArmy temp = new SendingArmy();
         temp.setStartTime(System.currentTimeMillis());
@@ -247,16 +247,16 @@ public class BattleFieldUI extends JDialog {
         IsLandUI.myHouse.setArmy(army);
 //        IsLandUI.currentHouse.addArmyToBattleField(temp.getArmy());
         IsLandUI.currentHouse.addArmyToBattleField(temp.getArmy(), temp);
-        
-        
+
+
     }
-    
+
      public void setBattleField(Army.Unit unit) {
         switch (unit) {
             case Archer:
                 battleField.reserve.getArcher().clear();
                 battleField.resetUnitSlot(battleField, battleField.longRangeFighter, Army.Unit.Archer);
-                
+
                 for (int i = 0; i < pnSetUnitBattle[unit.ordinal()].getSld().getValue(); i++) {
                     battleField.reserve.getArcher().push(new Archer());
                 }
@@ -325,7 +325,7 @@ public class BattleFieldUI extends JDialog {
             case Slinger:
                 battleField.reserve.getSlinger().clear();
                 battleField.resetUnitSlot(battleField, battleField.longRangeFighter, Army.Unit.Slinger);
-                
+
                 for (int i = 0; i < pnSetUnitBattle[unit.ordinal()].getSld().getValue(); i++) {
                     battleField.reserve.getSlinger().push(new Slinger());
                 }

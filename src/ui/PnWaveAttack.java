@@ -73,7 +73,7 @@ public class PnWaveAttack extends JPanel {
     private void addControl() {
         this.setBackground(new Color(251,232,193));
         lblMission.setBounds(10, 10, 100, 50);
-        lblMission.setIcon(new ImageIcon(getClass().getResource("/Image/Pillage_Enabled.PNG")));
+        lblMission.setIcon(new ImageIcon(getClass().getResource("/image/Pillage_Enabled.png")));
         lblArrivalTime.setBounds(120, 10, 150, 50);
         lblArrivalTime.setText("Test1");
         lblMunition.setBounds(230, 10, 100, 50);
@@ -85,7 +85,7 @@ public class PnWaveAttack extends JPanel {
         lblTarget.setBounds(560, 10, 100, 50);
         lblTarget.setText("Test5");
         btnAction.setBounds(670, 10, 50, 35);
-        btnAction.setIcon(new ImageIcon(getClass().getResource("/Image/wave.PNG")));
+        btnAction.setIcon(new ImageIcon(getClass().getResource("/image/wave.png")));
         this.add(lblMission);
         this.add(lblArrivalTime);
         this.add(lblMunition);
@@ -93,8 +93,8 @@ public class PnWaveAttack extends JPanel {
         this.add(lblOrigin);
         this.add(lblTarget);
         this.add(btnAction);
-        
-        
+
+
     }
 
     private void addEvents() {

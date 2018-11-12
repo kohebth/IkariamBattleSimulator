@@ -43,7 +43,7 @@ public class PnSetUnit extends JPanel{
 //        this.urlImg = urlImg;
         addControls();
         addEvents();
-                
+
     }
     public void addControls() {
         this.setLayout(null);
@@ -65,7 +65,7 @@ public class PnSetUnit extends JPanel{
         btnSetMax.setBounds(505, 15, 60, 20);
         this.add(btnSetMax);
     }
-    public void addEvents() {        
+    public void addEvents() {
         sld.addChangeListener(new ChangeListener() {
             public void stateChanged(ChangeEvent e) {
                 txt.setText(String.valueOf(sld.getValue()));
@@ -83,7 +83,7 @@ public class PnSetUnit extends JPanel{
                     txt.setText("0");
                 else if(intValue >= 1000)
                     txt.setText("999");
-                
+
                 sld.setValue(Integer.valueOf(txt.getText()));
             }
         });
@@ -118,5 +118,5 @@ public class PnSetUnit extends JPanel{
     public void setSld(JSlider sld) {
         this.sld = sld;
     }
-    
+
 }

@@ -33,7 +33,7 @@ public class IsLandUI extends JFrame{
     public static House[] house;
     public static House myHouse;
     public static BattleFieldFightingUI bffUI;
-    
+
     public IsLandUI(String title){
         super(title);
         house = new House[18];
@@ -44,19 +44,19 @@ public class IsLandUI extends JFrame{
             house[i].setName("Ikariam"+i);
             house[i].setId(i);
         }
-            
+
         houseInfoUI = new HouseInfoUI();
         addControls();
         addEvents();
     }
-    
+
     public void addControls(){
         Container con = getContentPane();
-        
+
         JPanel pnMain = new JPanel();
         pnMain.setLayout(null);
         con.add(pnMain);
-        
+
         btn1 = new MyJButtonFlag();
         btn1.setBounds(175, 225, 30, 30);
         txt1 = new JTextField();
@@ -66,7 +66,7 @@ public class IsLandUI extends JFrame{
         txt1.setVisible(false);
         pnMain.add(btn1);
         pnMain.add(txt1);
-        
+
         btn2 = new MyJButtonFlag();
         btn2.setBounds(270, 235, 30 ,30);
         txt2 = new JTextField();
@@ -76,7 +76,7 @@ public class IsLandUI extends JFrame{
         txt2.setVisible(false);
         pnMain.add(txt2);
         pnMain.add(btn2);
-        
+
         btn3 = new MyJButtonFlag();
         btn3.setBounds(370, 190, 30 ,30);
         txt3 = new JTextField();
@@ -86,7 +86,7 @@ public class IsLandUI extends JFrame{
         txt3.setVisible(false);
         pnMain.add(txt3);
         pnMain.add(btn3);
-        
+
         btn4 = new MyJButtonFlag();
         btn4.setBounds(470, 135, 30 ,30);
         txt4 = new JTextField();
@@ -96,7 +96,7 @@ public class IsLandUI extends JFrame{
         txt4.setVisible(false);
         pnMain.add(txt4);
         pnMain.add(btn4);
-        
+
         btn5 = new MyJButtonFlag();
         btn5.setBounds(770, 165, 30 ,30);
         txt5 = new JTextField();
@@ -106,7 +106,7 @@ public class IsLandUI extends JFrame{
         txt5.setVisible(false);
         pnMain.add(txt5);
         pnMain.add(btn5);
-        
+
         btn6 = new MyJButtonFlag();
         btn6.setBounds(650, 125, 30 ,30);
         txt6 = new JTextField();
@@ -116,7 +116,7 @@ public class IsLandUI extends JFrame{
         txt6.setVisible(false);
         pnMain.add(txt6);
         pnMain.add(btn6);
-        
+
         btn7 = new MyJButtonFlag();
         btn7.setBounds(145, 300, 30 ,30);
         txt7 = new JTextField();
@@ -126,7 +126,7 @@ public class IsLandUI extends JFrame{
         txt7.setVisible(false);
         pnMain.add(txt7);
         pnMain.add(btn7);
-        
+
         btn8 = new MyJButtonFlag();
         btn8.setBounds(125, 450, 30 ,30);
         txt8 = new JTextField();
@@ -136,7 +136,7 @@ public class IsLandUI extends JFrame{
         txt8.setVisible(false);
         pnMain.add(txt8);
         pnMain.add(btn8);
-        
+
         btn9 = new MyJButtonFlag();
         btn9.setBounds(345, 455, 30 ,30);
         txt9 = new JTextField();
@@ -146,7 +146,7 @@ public class IsLandUI extends JFrame{
         txt9.setVisible(false);
         pnMain.add(txt9);
         pnMain.add(btn9);
-        
+
         btn10 = new MyJButtonFlag();
         btn10.setBounds(240, 480, 30 ,30);
         txt10 = new JTextField();
@@ -156,7 +156,7 @@ public class IsLandUI extends JFrame{
         txt10.setVisible(false);
         pnMain.add(txt10);
         pnMain.add(btn10);
-        
+
         btn11 = new MyJButtonFlag();
         btn11.setBounds(370, 550, 30 ,30);
         txt11 = new JTextField();
@@ -166,7 +166,7 @@ public class IsLandUI extends JFrame{
         txt11.setVisible(false);
         pnMain.add(txt11);
         pnMain.add(btn11);
-        
+
         btn12 = new MyJButtonFlag();
         btn12.setBounds(585, 530, 30 ,30);
         txt12 = new JTextField();
@@ -176,7 +176,7 @@ public class IsLandUI extends JFrame{
         txt12.setVisible(false);
         pnMain.add(txt12);
         pnMain.add(btn12);
-        
+
         btn13 = new MyJButtonFlag();
         btn13.setBounds(700, 475, 30 ,30);
         txt13 = new JTextField();
@@ -186,7 +186,7 @@ public class IsLandUI extends JFrame{
         txt13.setVisible(false);
         pnMain.add(txt13);
         pnMain.add(btn13);
-        
+
         btn14 = new MyJButtonFlag();
         btn14.setBounds(835, 450, 30 ,30);
         txt14 = new JTextField();
@@ -196,7 +196,7 @@ public class IsLandUI extends JFrame{
         txt14.setVisible(false);
         pnMain.add(txt14);
         pnMain.add(btn14);
-        
+
         btn15 = new MyJButtonFlag();
         btn15.setBounds(835, 370, 30 ,30);
         txt15 = new JTextField();
@@ -206,7 +206,7 @@ public class IsLandUI extends JFrame{
         txt15.setVisible(false);
         pnMain.add(txt15);
         pnMain.add(btn15);
-        
+
         btn16 = new MyJButtonFlag();
         btn16.setBounds(815, 275, 30 ,30);
         txt16 = new JTextField();
@@ -216,7 +216,7 @@ public class IsLandUI extends JFrame{
         txt16.setVisible(false);
         pnMain.add(txt16);
         pnMain.add(btn16);
-        
+
         btn17 = new MyJButtonFlag();
         btn17.setBounds(670, 280, 30 ,30);
         txt17 = new JTextField();
@@ -226,21 +226,21 @@ public class IsLandUI extends JFrame{
         txt17.setVisible(false);
         pnMain.add(txt17);
         pnMain.add(btn17);
-        
+
         btnWaveAttack = new JButton("");
         btnWaveAttack.setBounds(775, 10, 70, 100);
         btnWaveAttack.setOpaque(false);
         btnWaveAttack.setContentAreaFilled(false);
         btnWaveAttack.setBorder(null);
         pnMain.add(btnWaveAttack);
-        
+
         lblIsLand = new JLabel();
         lblIsLand.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/island.jpg")));
         pnMain.add(lblIsLand);
         lblIsLand.setBounds(0, 10, 1000, 665);
-        
+
     }
-    
+
     public void addEvents(){
         btnWaveAttack.addActionListener(new ActionListener() {
             @Override
@@ -249,8 +249,8 @@ public class IsLandUI extends JFrame{
                     new WaveAttackUI("WaveAttack", myHouse.getSentRealArmy(), myHouse.getSendingArmy()).setVisible(true);
             }
         });
-        
-        
+
+
         btn1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -260,8 +260,8 @@ public class IsLandUI extends JFrame{
                 houseInfoUI.showWindow();
             }
         });
-        
-        
+
+
         btn2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -407,12 +407,12 @@ public class IsLandUI extends JFrame{
             }
         });
     }
-    
+
     public void showWindow(){
         setSize(1000, 665);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false);
         setVisible(true);
-    }          
+    }
 }
